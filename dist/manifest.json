@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "AI Chat Manager",
+  "version": "1.0.0",
+  "description": "Save and organize your AI chats from Gemini, ChatGPT, Claude, and Perplexity into collections.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAorhzJI1Sb54FH3Hx8+d4jImIJ1slexml8IbKIZlPpWdSvACnogeEw4hEjttspS8sUeSvEnLyXUh4vO3yOnaJB+lDnZJNctqvQz03m0BF5UY41QSVdLBJOE4kna5Rp7PQLR/PBbPZyNItOuAbdJELKyEjuYyBfqziWww3d9RBSfZw9HoD93c5pbyTpCu3Wo2c7hK2SeqvY1sTeu3s9pLr9c7H/zHPtreYccmdlosLrDi7cF3JQo6l/byZnO4IieNLCUSe0DPW6dYYl5W0m6ag1Ua2SZ5xJvrhF76qt2lkw/v2T6LB2gDrgmnPAAKdUNky972AEt5sBJRBiGyB1Njm4wIDAQAB",
+  "permissions": ["identity", "storage", "tabs", "scripting", "activeTab"],
+  "host_permissions": ["https://*/*"],
+  "oauth2": {
+    "client_id": "982276528045-rk3qhp08bmlikfo3qo1nhaojkclq0e4e.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/drive.appdata"]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content.js"],
+      "matches": ["https://*/*"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png"
+  }
+}
